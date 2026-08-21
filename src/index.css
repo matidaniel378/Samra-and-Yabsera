@@ -1,0 +1,132 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-cream: #FBF9F5;
+    --color-cream-dark: #F3EFE6;
+    --color-gold: #D4AF37;
+    --color-gold-light: #F5E096;
+    --color-gold-dark: #A38020;
+    --color-charcoal: #1C1917;
+  }
+
+  body {
+    background-color: #FBF9F5;
+    color: #1C1917;
+    font-family: 'Cormorant Garamond', serif;
+    background-image: radial-gradient(#D4AF37 0.4px, transparent 0.4px), radial-gradient(#D4AF37 0.4px, #FBF9F5 0.4px);
+    background-size: 24px 24px;
+    background-position: 0 0, 12px 12px;
+    background-color: #FBF9F5;
+  }
+}
+
+/* Custom Typography Utilities */
+.font-serif-luxury {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-script {
+  font-family: 'Great Vibes', cursive;
+}
+
+.font-cinzel {
+  font-family: 'Cinzel Decorative', serif;
+}
+
+.font-sans-luxury {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Metallic Gold Foil Effect */
+.gold-foil-text {
+  background: linear-gradient(135deg, #B8860B 0%, #F5E096 25%, #D4AF37 50%, #8B6508 75%, #F5E096 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shineGold 8s linear infinite;
+}
+
+.gold-foil-bg {
+  background: linear-gradient(135deg, #B8860B 0%, #F5E096 25%, #D4AF37 50%, #8B6508 75%, #F5E096 100%);
+  background-size: 200% auto;
+  animation: shineGold 8s linear infinite;
+}
+
+.gold-border {
+  border-image: linear-gradient(135deg, #B8860B, #F5E096, #D4AF37, #8B6508) 1;
+}
+
+@keyframes shineGold {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* 3D Wax Seal Embossing & Glow */
+.wax-seal {
+  background: radial-gradient(circle at 35% 35%, #F5E096 0%, #D4AF37 35%, #B8860B 70%, #6E5005 100%);
+  box-shadow: 
+    0 10px 25px -5px rgba(139, 101, 8, 0.5),
+    inset 0 2px 4px rgba(255, 255, 255, 0.6),
+    inset 0 -4px 6px rgba(0, 0, 0, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+.wax-seal::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.4) 0%, transparent 60%);
+  transform: rotate(45deg);
+  pointer-events: none;
+}
+
+/* Tactile 3D Paper Shadow */
+.paper-shadow {
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.05),
+    0 10px 15px -3px rgba(0, 0, 0, 0.08),
+    0 20px 25px -5px rgba(0, 0, 0, 0.06),
+    0 0 0 1px rgba(212, 175, 55, 0.2);
+}
+
+.paper-shadow-deep {
+  box-shadow:
+    0 15px 35px -5px rgba(44, 38, 34, 0.18),
+    0 5px 15px rgba(0, 0, 0, 0.08),
+    0 0 0 1px rgba(212, 175, 55, 0.25);
+}
+
+/* Shimmer Keyframe */
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.animate-shimmer {
+  animation: shimmer 2.5s infinite;
+}
+
+/* Glassmorphism Gold */
+.glass-gold {
+  background: rgba(251, 249, 245, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+/* 3D Envelope Perspective */
+.perspective-1000 {
+  perspective: 1200px;
+}
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+.backface-hidden {
+  backface-visibility: hidden;
+}
